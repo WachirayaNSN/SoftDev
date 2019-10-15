@@ -14,13 +14,17 @@
 <body>
     <div id='Menu'class="card text-white bg-secondary mb-3" style="max-width: 18rem;">
       <div class="card-header">
-          <button type="button" class="btn btn-warning"><img id='#Account' src="Acoount_64x64.png" alt="img"></button>
-          Wachiraya Tang
-          
-      </div>
+          <button id='Account'type="button" class="btn btn-light"><img  src="Account_64x64.png" alt="img"></button>
+          <a id='Name'href="EX05.html" target="_blank"><h4>Wachiraya Tangsiri</h4></a>
+          <div class="alert alert-danger collapse" role="alert" id="Alert">
+              <button type="button" class="close" data-dismiss="alert">&times;</button>
+           <h3>Error!!</h3>Your search BOX 1
+            </div>
+        </div>
         <div class="card-body">
         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
     </div>
+    
 <!--------------CSS-------------------------------------------------------------------------------------->
 <style>
   #Menu{
@@ -28,15 +32,28 @@
     position: fixed;
     height: 100vh;
     width: 550px;
+    align-content: center;
+    color: coral;
   }
   #Account{
-    position: fixed;
-    right: 5px;
+    position: relative;
+    left: 80px;
+  }
+  #Name{
+    color: coral;
+    align-content: center;
+    justify-content: center;
   }
 </style>
 <!---------JavaScript------------------------------------------------------------------------------------>
 <script>
-
+    $(document).ready(function(){
+      $("#Account").click(function(){
+        $("#Alert").show();
+      });
+    });
+   
+ }
 </script>
 <div>
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

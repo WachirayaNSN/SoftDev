@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>EX02_ME_BULB_JQUERY</title>
+    <link rel="stylesheet" href="./bootstrap-4.1.0/dist/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+</head>
+<body style="text-align:center;">
+    <img src="bulboff.gif" class="bulb">
+    <img src="bulboff.gif" class="bulb">
+    <div>
+        <button class="btn" onclick="LIGHT(1)">Button 1</button>
+        <button class="btn" onclick="LIGHT(2)">Button 2</button>
+    </div>
+    <div class="alert alert-primary" role="alert">
+        A simple primary alert—check it out!
+      </div>
+<script>
+   function LIGHT(n){
+      var index = n-1
+      var bulb = document.getElementsByClassName('bulb')[index]
+      var btn = document.getElementsByClassName('btn')[index]
+      console.log(bulb.src)
+      var lightON = bulb.src == 'file:///C:/Users/ARM/Desktop/My%20Dev/bulboff.gif'
+      if(lightON){
+          bulb.src ='bulboff.gif'
+          btn.innerHTML = "Bulb "+n+" On"
+      }
+      else{
+          bulb.src ='bulbon.gif'
+          btn.innerHTML = "Bulb "+n+" Off"
+      }
+   }
+</script>
+<style>
+
+</style>    
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+<script src="./bootstrap-4.1.0/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
